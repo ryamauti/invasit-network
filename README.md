@@ -20,3 +20,20 @@ https://github.com/FluxionNetwork/fluxion
 
 Contact: sleepyhollow.lockwood@protonmail.ch
 
+-----
+Edit 08-nov-2017:
+Just added an one-time-one-machine-tested code for Raspberry Pi 3 with kali Linux.
+
+It works on NEXMON's image: kali-2017.2-rpi3-nexmon.img
+Environment setup: make sure you have installed Kali Linux Full:
+\# apt-get install kali-linux-full
+
+The wireless device on Raspberry Pi doesn't support by default monitor mode, but thanks to NEXMON's image it does.
+The code itself runs a command to allow monitor mode:
+\# nexutil -m2
+
+In case this doesn't work, try ruunning it with '-m1' prior to execute the code.
+
+Do not start the code as sh ./invasitrpi.sh, because it will invoke dash, not bash.
+
+Please contribute!
