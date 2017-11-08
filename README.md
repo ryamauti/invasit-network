@@ -24,6 +24,8 @@ Contact: sleepyhollow.lockwood@protonmail.ch
 Edit 08-nov-2017:
 Just added an one-time-one-machine-tested code for Raspberry Pi 3 with kali Linux.
 
+\# bash ./invasitrpi.sh
+
 It works on NEXMON's image: kali-2017.2-rpi3-nexmon.img
 Environment setup: make sure you have installed Kali Linux Full:
 \# apt-get install kali-linux-full
@@ -35,5 +37,11 @@ The code itself runs a command to allow monitor mode:
 In case this doesn't work, try ruunning it with '-m1' prior to execute the code.
 
 Do not start the code as sh ./invasitrpi.sh, because it will invoke dash, not bash.
+
+The last part of the code, wordlist matching, really takes a considerable amount of time running on RPi. it is adviseable to break the code in two and send the handshake to a more efficient CPU.
+The code to run it and stop before wordlist search is:
+
+\# bash invasitrpistop.sh
+
 
 Please contribute!
